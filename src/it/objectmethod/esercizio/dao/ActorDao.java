@@ -9,5 +9,10 @@ public interface ActorDao {
 	public List<Actor> getAllActors();
 	
 	public List<Actor> getActorsByFilmName(String film);
-
+	
+	public void insertNewActor(Actor actor);
+	
+	public void modifyActor(Actor actor);
+	
+	public Actor getActorById(int id);
 }

@@ -8,6 +8,6 @@
 </head>
 <body>
 <a href="http://localhost:8080/Esercizio_1_BD_SQL/show_actor_list">Show Actor List</a><br>
-<a href="http://localhost:8080/Esercizio_1_BD_SQL/InsertFilmName.jsp">Insert Film Name</a>
+<a href="http://localhost:8080/Esercizio_1_BD_SQL/InsertFilmName.jsp">Insert Film Name</a><br>
 </body>
 </html>

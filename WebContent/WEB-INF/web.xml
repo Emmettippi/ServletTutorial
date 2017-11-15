@@ -23,4 +23,20 @@
 		<servlet-name>ActorsFilm</servlet-name>
 		<url-pattern>/actors_by_film</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>ModifyActors</servlet-name>
+		<servlet-class>it.objectmethod.esercizio.servlet.SetActorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyActors</servlet-name>
+		<url-pattern>/set_actors</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ModificationComplete</servlet-name>
+		<servlet-class>it.objectmethod.esercizio.servlet.ConfirmActorModificationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificationComplete</servlet-name>
+		<url-pattern>/modification_complete</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -4,6 +4,7 @@ public class Actor {
 	
 	private String firstname;
 	private String lastname;
+	private int id;
 	
 	public String getFirstname() {
 		return firstname;
@@ -17,6 +18,11 @@ public class Actor {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id=id;
+	}
 
 }
