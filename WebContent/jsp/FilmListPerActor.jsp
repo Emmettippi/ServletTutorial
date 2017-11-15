@@ -24,6 +24,7 @@
 			</c:forEach>
 		</table>
 	</c:if>
+	<p><a href="index.jsp">Torna alla home</a></p>
 	
 </body>
 </html>
