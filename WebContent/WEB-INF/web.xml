@@ -39,4 +39,12 @@
 		<servlet-name>ModificationComplete</servlet-name>
 		<url-pattern>/modification_complete</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>ShowFilmListByActor</servlet-name>
+		<servlet-class>it.objectmethod.esercizio.servlet.GetFilmByActorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowFilmListByActor</servlet-name>
+		<url-pattern>/show_film_list_by_actor</url-pattern>
+	</servlet-mapping>
 </web-app>

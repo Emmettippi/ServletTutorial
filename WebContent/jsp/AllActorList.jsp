@@ -9,23 +9,26 @@
 </head>
 <body>
 	<p>Here's the actor list</p>
-	<table>
-		<tr>
-			<th>Firstname</th>
-			<th>Lastname</th>
-		</tr>
-		<c:forEach items="${actors}" var="riga">
-		<tr>
-			<td><c:out value="${riga.firstname}"></c:out></td>
-			<td><c:out value="${riga.lastname}"></c:out></td>
-			<td><a href="http://localhost:8080/Esercizio_1_BD_SQL/set_actors?id=${riga.id}">Modifica</a></td>
-		</tr>
-		</c:forEach>
-	</table>
 	<form action="set_actors">
 		<input type="submit" value="Click here"> to add a new actor.
 		<input type="hidden" name="id" value="0">
 	</form>
+	<table>
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Modifica</th>
+			<th>Link Film-List</th>
+		</tr>
+		<c:forEach items="${actors}" var="riga">
+			<tr>
+				<td><c:out value="${riga.firstname}"></c:out></td>
+				<td><c:out value="${riga.lastname}"></c:out></td>
+				<td><a href="http://localhost:8080/Esercizio_1_BD_SQL/set_actors?id=${riga.id}">Modifica</a></td>
+				<td><a href="http://localhost:8080/Esercizio_1_BD_SQL/show_film_list_by_actor?id=${riga.id}">Visualizza i suoi film</a></td>
+			</tr>
+		</c:forEach>
+	</table>
 	<p><a href="index.jsp">Torna alla home</a></p>
 </body>
 </html>
