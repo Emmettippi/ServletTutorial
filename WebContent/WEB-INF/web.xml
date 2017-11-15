@@ -5,27 +5,22 @@
 	id="WebApp_ID" version="3.0">
 	<display-name>Esercizio_1_BD_SQL</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
-		<servlet-name>Esercizio_1DB</servlet-name>
-		<servlet-class>it.objectmethod.esercizio.db.Esercizio1DB</servlet-class>
+		<servlet-name>AllActors</servlet-name>
+		<servlet-class>it.objectmethod.esercizio.servlet.AllActorsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Esercizio_1DB</servlet-name>
-		<url-pattern>/showlist</url-pattern>
+		<servlet-name>AllActors</servlet-name>
+		<url-pattern>/show_actor_list</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>EsPS</servlet-name>
-		<servlet-class>it.objectmethod.esercizio.db.EsPrepareStatement</servlet-class>
+		<servlet-name>ActorsFilm</servlet-name>
+		<servlet-class>it.objectmethod.esercizio.servlet.ActorsFilmServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>EsPS</servlet-name>
-		<url-pattern>/preparestatement</url-pattern>
+		<servlet-name>ActorsFilm</servlet-name>
+		<url-pattern>/actors_by_film</url-pattern>
 	</servlet-mapping>
 </web-app>
