@@ -22,6 +22,6 @@ public class ActorsFilmServlet extends HttpServlet{
 
 		request.setAttribute("actors", actorList);
 		request.setAttribute("film", strfilm);
-		request.getRequestDispatcher("jsp/FilmListPerActor.jsp").forward(request, response);
+		request.getRequestDispatcher("jsp/ActorsFilm.jsp").forward(request, response);
 	}
 }

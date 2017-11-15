@@ -24,8 +24,8 @@
 			<tr>
 				<td><c:out value="${riga.firstname}"></c:out></td>
 				<td><c:out value="${riga.lastname}"></c:out></td>
-				<td><a href="http://localhost:8080/Esercizio_1_BD_SQL/set_actors?id=${riga.id}">Modifica</a></td>
-				<td><a href="http://localhost:8080/Esercizio_1_BD_SQL/show_film_list_by_actor?id=${riga.id}">Visualizza i suoi film</a></td>
+				<td><a href="http://localhost:8080/FilmActor/set_actors?id=${riga.id}">Modifica</a></td>
+				<td><a href="http://localhost:8080/FilmActor/show_film_list_by_actor?id=${riga.id}">Visualizza i suoi film</a></td>
 			</tr>
 		</c:forEach>
 	</table>
