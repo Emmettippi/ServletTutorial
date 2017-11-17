@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import it.objectmethod.esercizio.beans.Actor;
-import it.objectmethod.esercizio.beans.Film;
 import it.objectmethod.esercizio.dao.ActorDao;
-import it.objectmethod.esercizio.dao.FilmDao;
 
 @Controller
 public class ActorController {
