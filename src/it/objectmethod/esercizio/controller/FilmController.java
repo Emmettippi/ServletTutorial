@@ -28,6 +28,6 @@ public class FilmController {
 		map.put("actor", actor);
 		List<Film> filmlist = filmdao.getFilmByActor(actor);
 		map.put("films", filmlist);
-		return new ModelAndView("FilmListPerActor", map);
+		return new ModelAndView("FilmListPerActor");
 	}
 }

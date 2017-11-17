@@ -29,6 +29,7 @@ public class FilmJdbcTemplate extends NamedParameterJdbcDaoSupport implements Fi
 			return ret;
 		}
 		
+		@Override
 		public void insertNewFilm(Film film) {
 			java.util.Date date = Calendar.getInstance().getTime();
 			java.sql.Date now = new java.sql.Date(date.getTime());
@@ -37,6 +38,7 @@ public class FilmJdbcTemplate extends NamedParameterJdbcDaoSupport implements Fi
 			getJdbcTemplate().update( query, film.getTitle(), now);
 		}
 		
+		@Override
 		public void editFilm(Film film) {
 			java.util.Date date = Calendar.getInstance().getTime();
 			java.sql.Date now = new java.sql.Date(date.getTime());
@@ -45,7 +47,8 @@ public class FilmJdbcTemplate extends NamedParameterJdbcDaoSupport implements Fi
 			query+="WHERE film_id=?";
 			getJdbcTemplate().update( query, film.getTitle(), now, film.getId());
 		}
-		
+
+		@Override
 		public Film getFilmById(int id) {
 			String query = "SELECT film_id,title FROM sakila.title WHERE film_id=?";
 			Film film = getJdbcTemplate().queryForObject(query, new Object[]{id}, new FilmMapper());

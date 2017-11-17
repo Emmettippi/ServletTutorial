@@ -30,6 +30,7 @@ public class ActorJdbcTemplate extends NamedParameterJdbcDaoSupport implements A
 		return ret;
 	}
 	
+	@Override
 	public void insertNewActor(Actor actor) {
 		java.util.Date date = Calendar.getInstance().getTime();
 		java.sql.Date now = new java.sql.Date(date.getTime());
@@ -38,6 +39,7 @@ public class ActorJdbcTemplate extends NamedParameterJdbcDaoSupport implements A
 		getJdbcTemplate().update( query, actor.getFirstname(), actor.getLastname(), now);
 	}
 	
+	@Override
 	public void modifyActor(Actor actor) {
 		java.util.Date date = Calendar.getInstance().getTime();
 		java.sql.Date now = new java.sql.Date(date.getTime());
@@ -47,6 +49,7 @@ public class ActorJdbcTemplate extends NamedParameterJdbcDaoSupport implements A
 		getJdbcTemplate().update( query, actor.getFirstname(), actor.getLastname(), now, actor.getId());
 	}
 	
+	@Override
 	public Actor getActorById(int id) {
 		String query = "SELECT first_name,last_name,actor_id FROM sakila.actor WHERE actor_id=?";
 		Actor actor = getJdbcTemplate().queryForObject(query, new Object[]{id}, new ActorMapper());
