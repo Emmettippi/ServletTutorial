@@ -21,7 +21,7 @@
 		</tr>
 		</c:forEach>
 	</table>
-	<p><a href="http://localhost:8080/FilmActor/">Torna alla home</a></p>
+	<p><a href="/FilmActor/">Torna alla home</a></p>
 
 </body>
 </html>

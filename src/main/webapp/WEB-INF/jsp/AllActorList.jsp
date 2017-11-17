@@ -8,7 +8,7 @@
 <title>Actor List</title>
 </head>
 <body>
-	<p><a href="http://localhost:8080/FilmActor/">Torna alla home</a></p>
+	<p><a href="/FilmActor/">Torna alla home</a></p>
 	<p>Here's the actor list</p>
 	<form action="set_actors">
 		<input type="submit" value="Click here"> to add a new actor.
