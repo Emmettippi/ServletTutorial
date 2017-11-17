@@ -8,6 +8,7 @@
 <title>Actor List</title>
 </head>
 <body>
+	<p><a href="http://localhost:8080/FilmActor/">Torna alla home</a></p>
 	<p>Here's the actor list</p>
 	<form action="set_actors">
 		<input type="submit" value="Click here"> to add a new actor.
@@ -24,11 +25,10 @@
 			<tr>
 				<td><c:out value="${riga.firstname}"></c:out></td>
 				<td><c:out value="${riga.lastname}"></c:out></td>
-				<td><a href="http://localhost:8080/FilmActor/set_actors?id=${riga.id}">Modifica</a></td>
-				<td><a href="http://localhost:8080/FilmActor/show_film_list_by_actor?id=${riga.id}">Visualizza i suoi film</a></td>
+				<td><a href="set_actors?id=${riga.id}">Modifica</a></td>
+				<td><a href="show_film_list_by_actor?id=${riga.id}">Visualizza i suoi film</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<p><a href="index.jsp">Torna alla home</a></p>
 </body>
 </html>

@@ -8,20 +8,20 @@
 <title>There you go</title>
 </head>
 <body>
-	<p>Here's the list of all actors who made the movie: ${film}</p>
+	<p>Here's the list of all actors who made the movie: ${ritorno.film}</p>
 	<table>
 		<tr>
 			<th>Firstname</th>
 			<th>Lastname</th>
 		</tr>
-		<c:forEach items="${actors}" var="riga">
+		<c:forEach items="${ritorno.actors}" var="riga">
 		<tr>
 			<td><c:out value="${riga.firstname}"></c:out></td>
 			<td><c:out value="${riga.lastname}"></c:out></td>
 		</tr>
 		</c:forEach>
 	</table>
-	<p><a href="index.jsp">Torna alla home</a></p>
+	<p><a href="http://localhost:8080/FilmActor/">Torna alla home</a></p>
 
 </body>
 </html>

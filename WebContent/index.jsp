@@ -7,7 +7,7 @@
 <title>progetto Attori</title>
 </head>
 <body>
-<a href="http://localhost:8080/FilmActor/show_actor_list">Show Actor List</a><br>
-<a href="http://localhost:8080/FilmActor/InsertFilmName.jsp">Insert Film Name</a><br>
+<a href="show_actor_list">Show Actor List</a><br>
+<a href="insert_film_name">Insert Film Name</a><br>
 </body>
 </html>
