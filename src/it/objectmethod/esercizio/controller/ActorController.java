@@ -19,8 +19,6 @@ import it.objectmethod.esercizio.dao.FilmDao;
 public class ActorController {
 	@Autowired
 	private ActorDao actordao;
-	@Autowired
-	private FilmDao filmdao;
 	
 	@RequestMapping("/show_actor_list")
 	public ModelAndView getAllActor() {
@@ -65,17 +63,6 @@ public class ActorController {
 		return getAllActor();
 	}
 	
-	@RequestMapping("/show_film_list_by_actor")
-	public ModelAndView getActorsByFilm(@RequestParam("id") int id) {
-		Map<String,Object> map = new HashMap<String,Object>();
-		Actor actor=actordao.getActorById(id);
-		map.put("actor", actor);
-		List<Film> filmlist = filmdao.getFilmByActor(actor);
-		map.put("film", filmlist);
-		map.put("sizeList", filmlist.size());
-		return new ModelAndView("FilmListPerActor","ritorno",map);
-	}
-	
 	public ActorDao getActordao() {
 		return actordao;
 	}
@@ -83,13 +70,4 @@ public class ActorController {
 	public void setActordao(ActorDao actordao) {
 		this.actordao = actordao;
 	}
-
-	public FilmDao getFilmdao() {
-		return filmdao;
-	}
-
-	public void setFilmdao(FilmDao filmdao) {
-		this.filmdao = filmdao;
-	}
-
 }
